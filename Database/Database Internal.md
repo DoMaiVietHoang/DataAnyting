@@ -37,4 +37,23 @@ These files are partioned into fixed-size called pages, which range from 4 to 16
 )
 Figure 3.4 describle a simple page for fixed-size data records, each page is just a concatenation of triplets, keys: k, associated value v and pointers to child page: p
 
+### Slotted Pages:
+- Problem: Storing variacle-size records make us reclaim the space. If we
+attempt to put a record of size n into the space previously occupied by the
+record of size m, unless m == n or we can find another record that has a
+size exactly m – n, this space will remain unused.
+- Solve: Organizing page into a collection of cells. Split ouyt pointer and cells into two regions on different side of page.
+![alt text](images/Slotted%20Page.png)
+As illustration in Figure 3-5, a slooted page has: 
+    * A fixed size header with holds important imformation about the page and cells.
+    * Cells may differ in size and it can hold: keys, pointer, data records, etc...
+### Cell layout:
+
+
+
+
+
+
+
+
 
